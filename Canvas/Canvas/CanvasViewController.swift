@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CanvasViewController: UIViewController {
+class CanvasViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var trayView: UIView!
     
@@ -19,6 +19,11 @@ class CanvasViewController: UIViewController {
     var closedLocation : CGPoint!
     
     var velociyOfTray : CGPoint!
+    
+    var newFaceImage: UIImageView!
+    
+    
+    
     
     
     override func viewDidLoad() {
@@ -34,6 +39,8 @@ class CanvasViewController: UIViewController {
         trayView.center = closedLocation
         
         // Do any additional setup after loading the view.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,6 +121,51 @@ class CanvasViewController: UIViewController {
         }
     }
     
+    
+    
+    @IBAction func onDrappedImage(_ sender: UIPanGestureRecognizer) {
+        
+        let point = sender.location(in: self.view)
+        
+        if sender.state == .began {
+            print("Gesture began at: \(point)")
+            let theImage = sender.view as! UIImageView
+            self.newFaceImage = UIImageView(image: theImage.image!)
+            self.newFaceImage.isUserInteractionEnabled = true
+            let panGesture = UIPanGestureRecognizer(target: self, action: #selector(onPanHandler))
+            panGesture.delegate = self
+            self.newFaceImage.addGestureRecognizer(panGesture)
+            self.view.addSubview(self.newFaceImage)
+            self.newFaceImage.center = theImage.center
+            
+        } else if sender.state == .changed {
+            self.newFaceImage.center = point
+            
+        } else if sender.state == .ended {
+            
+            
+        }
+        
+    }
+    
+    
+    func onPanHandler(sender: UIPanGestureRecognizer) {
+        
+        let point = sender.location(in: self.view)
+        let newImageV = sender.view as! UIImageView
+        
+        if sender.state == .began {
+            print("Gesture began at: \(point)")
+            newImageV.center = point
+            
+        } else if sender.state == .changed {
+            newImageV.center = point
+            
+        } else if sender.state == .ended {
+            
+            
+        }
+    }
     
     
     
