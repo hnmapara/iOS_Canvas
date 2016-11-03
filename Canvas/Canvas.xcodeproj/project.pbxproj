@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		85938B521DCAD43A00F75EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85938B511DCAD43A00F75EC3 /* AppDelegate.swift */; };
-		85938B541DCAD43A00F75EC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85938B531DCAD43A00F75EC3 /* ViewController.swift */; };
 		85938B571DCAD43A00F75EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85938B551DCAD43A00F75EC3 /* Main.storyboard */; };
 		85938B591DCAD43A00F75EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85938B581DCAD43A00F75EC3 /* Assets.xcassets */; };
 		85938B5C1DCAD43A00F75EC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85938B5A1DCAD43A00F75EC3 /* LaunchScreen.storyboard */; };
 		85938B671DCAD43B00F75EC3 /* CanvasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85938B661DCAD43B00F75EC3 /* CanvasTests.swift */; };
+		85938B721DCAD69800F75EC3 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85938B711DCAD69800F75EC3 /* CanvasViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,6 @@
 /* Begin PBXFileReference section */
 		85938B4E1DCAD43A00F75EC3 /* Canvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canvas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85938B511DCAD43A00F75EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85938B531DCAD43A00F75EC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85938B561DCAD43A00F75EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85938B581DCAD43A00F75EC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85938B5B1DCAD43A00F75EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		85938B621DCAD43B00F75EC3 /* CanvasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanvasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85938B661DCAD43B00F75EC3 /* CanvasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTests.swift; sourceTree = "<group>"; };
 		85938B681DCAD43B00F75EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85938B711DCAD69800F75EC3 /* CanvasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				85938B511DCAD43A00F75EC3 /* AppDelegate.swift */,
-				85938B531DCAD43A00F75EC3 /* ViewController.swift */,
 				85938B551DCAD43A00F75EC3 /* Main.storyboard */,
 				85938B581DCAD43A00F75EC3 /* Assets.xcassets */,
 				85938B5A1DCAD43A00F75EC3 /* LaunchScreen.storyboard */,
 				85938B5D1DCAD43A00F75EC3 /* Info.plist */,
+				85938B711DCAD69800F75EC3 /* CanvasViewController.swift */,
 			);
 			path = Canvas;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85938B541DCAD43A00F75EC3 /* ViewController.swift in Sources */,
+				85938B721DCAD69800F75EC3 /* CanvasViewController.swift in Sources */,
 				85938B521DCAD43A00F75EC3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +412,7 @@
 				85938B6D1DCAD43B00F75EC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85938B6E1DCAD43B00F75EC3 /* Build configuration list for PBXNativeTarget "CanvasTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				85938B701DCAD43B00F75EC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
